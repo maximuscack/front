@@ -1,0 +1,35 @@
+<br />
+<a routerLink= "/parameters/departamento-crear" class="btn btn-success">Agregar Registro</a>
+
+<fieldset>
+    <legend>listado de Departamentos</legend>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Acciones
+                </th>            
+            </tr>
+        </thead>
+        <tbody>
+            <tr  *ngFor= "let r of recordList">
+                <td>
+                    {{r.id_departamento}}
+                </td>
+                <td>
+                    {{r.nombre}}
+                </td>
+                <td>
+                    <a routerLink="/parameters/departamento-crear/{{r.id_departamento}}" class="btn btn-warning orange">Editar</a>
+                    &nbsp;<a routerLink="/parameters/departamento-remover/{{r.id_departamento}}" class="btn btn-warning red">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</fieldset>

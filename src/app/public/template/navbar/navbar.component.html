@@ -1,0 +1,35 @@
+<nav>
+    <div class="nav-wrapper teal">
+      <!--comentario: boton de la parte superior derecha-->
+      <a routerLink="home" class="brand-logo">Inicio</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <!--comentario: botones de la parte superior izquierda-->
+        <li *ngIf="activeSession"><a routerLink="parameters/facultad-buscar">Facultad"</a></li>
+        <li *ngIf="activeSession"><a routerLink="parameters/departamento-buscar">Departamento</a></li>
+        <li *ngIf="activeSession"><a routerLink="parameters/proponente-buscar">Proponente</a></li>
+        <li *ngIf="activeSession"><a routerLink="parameters/solicitud-buscar">Solicitud</a></li>
+        <li *ngIf="activeSession"><a routerLink="parameters/tipo-solicitud-buscar">Tipo de solicitud</a></li>
+        <li *ngIf="activeSession"><a routerLink="parameters/jurado-buscar">Jurado</a></li>
+        <li *ngIf="activeSession"><a routerLink="parameters/resultado-buscar">Resultado de la evaluacion</a></li>
+        <li *ngIf="activeSession"><a routerLink="parameters/evaluacion-buscar">Evaluacion solicitud</a></li>
+        <li *ngIf="activeSession"><a routerLink="parameters/area-buscar">Area de investigacion</a></li>
+        <li *ngIf="!activeSession"><a routerLink="security/login">Ingreso</a></li>
+        <li *ngIf="activeSession"><a routerLink="security/logout">Salir</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a routerLink="parameters/area-buscar">Facultad</a></li>
+        <li><a routerLink="parameters/area-buscar">Departamento</a></li>
+        <li><a routerLink="parameters/area-buscar">Proponente</a></li>
+        <li><a routerLink="parameters/area-buscar">Solicitud</a></li>
+        <li><a routerLink="parameters/area-buscar">Tipo de solicitud</a></li>
+        <li><a routerLink="parameters/area-buscar">Jurado</a></li>
+        <li><a routerLink="parameters/area-buscar">Resultado de la evaluacion</a></li>
+        <li><a routerLink="parameters/area-buscar">Evaluacion solicitud</a></li>
+        <li><a routerLink="parameters/area-buscar">Area de investigacion</a></li>
+        <li><a routerLink="security/login">Ingreso</a></li>
+        <li><a routerLink="security/logout">Salir</a></li>
+  </ul>
